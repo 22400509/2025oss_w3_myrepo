@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>네이버 카페 클론 코딩 과제 2-2</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="my.css">
+    <link rel="icon" href="https://via.placeholder.com/32/00A14B/FFFFFF?text=C&v=2" type="image/png">
+
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .sidebar .nav-link {
+            color: #333;
+        }
+
+        .sidebar .nav-link.active {
+            font-weight: bold;
+            color: #198754;
+        }
+
+        .custom-banner {
+            background-color: #d1e7dd;
+        }
+
+        .ad-banner {
+            background-color: #e9d3ff;
+            min-height: 150px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="p-3 mb-3 bg-white border-bottom shadow-sm">
+        <div class="container">
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-dark text-decoration-none h5">
+                    <strong>NAVER 카페</strong>
+                </a>
+
+                <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-auto ms-lg-4" role="search">
+                    <div class="input-group">
+                        <input type="search" class="form-control" placeholder="원하는 카페, 글을 찾아보세요...">
+                        <button class="btn btn-success" type="button"><i class="bi bi-search"></i></button>
+                    </div>
+                </form>
+
+                <div class="text-end">
+                    <p>22400509님의 카페</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="row g-4">
+            <nav class="col-md-2">
+                <ul class="nav flex-column">
+                    <li class="nav-item"><a href="#" class="nav-link active">카페홈</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">이웃</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">구독</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">인기글</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">내소식</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">채팅</a></li>
+                </ul>
+                <hr>
+                <ul class="nav flex-column small">
+                    <li class="nav-item"><a href="#" class="nav-link">주제별 카페</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">지역별 카페</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">인기 팬카페</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">대표 카페</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">카페 랭킹</a></li>
+                </ul>
+            </nav>
+
+            <main class="col-md-7">
+                <div class="p-4 mb-4 rounded-3 custom-banner">
+                    <p class="h5">9월 카플리 선정 카페 대공개! <a href="#" class="fw-bold">우리 카페는?</a></p>
+                </div>
+
+                <div class="popular-posts">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <h2 class="h4 mb-0">🔥 MY 게시물 </h2>
+                        <a href="add.html" class="btn btn-sm btn-success">게시물 추가</a>
+                    </div>
+                    <div class="list-group">
+                        <a href="view.html" class="list-group-item list-group-item-action d-flex gap-3 py-3">
+                            <img src="https://via.placeholder.com/120x80" alt="thumbnail" width="120" height="80"
+                                class="rounded-3">
+                            <div class="d-flex gap-2 w-100 justify-content-between">
+                                <div>
+                                    <h6 class="mb-1">[MNT] 엔지니어 공채</h6>
+                                    <p class="mb-0 opacity-75 small">남지원 💬 7 ❤️ 17 · <small class="text-muted">오전 9:20</small></p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="view2.html" class="list-group-item list-group-item-action d-flex gap-3 py-3">
+                            <img src="https://via.placeholder.com/120x80" alt="thumbnail" width="120" height="80"
+                                class="rounded-3">
+                            <div class="d-flex gap-2 w-100 justify-content-between">
+                                <div>
+                                    <h6 class="mb-1">요즘 새내기들 근황 ㅎㅎㄷㄷㄷ</h6>
+                                    <p class="mb-0 opacity-75 small">남지원 💬 0 ❤️ 2 · <small class="text-muted">어제 오후 5:13</small></p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="view3.html" class="list-group-item list-group-item-action d-flex gap-3 py-3">
+                            <img src="https://via.placeholder.com/120x80" alt="thumbnail" width="120" height="80"
+                                class="rounded-3">
+                            <div class="d-flex gap-2 w-100 justify-content-between">
+                                <div>
+                                    <h6 class="mb-1">과제가 너무 힘듭니다...</h6>
+                                    <p class="mb-0 opacity-75 small">남지원 💬 23 ❤️ 0 · <small class="text-muted">2025. 9. 3 오전 11:58</small></p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="view4.html" class="list-group-item list-group-item-action d-flex gap-3 py-3">
+                            <img src="https://via.placeholder.com/120x80" alt="thumbnail" width="120" height="80"
+                                class="rounded-3">
+                            <div class="d-flex gap-2 w-100 justify-content-between">
+                                <div>
+                                    <h6 class="mb-1">태우가 너무 좋습니다</h6>
+                                    <p class="mb-0 opacity-75 small">남지원 💬 41 ❤️ 99+ · <small class="text-muted">2025. 8. 17 오후 1:11</small></p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </main>
+
+            <aside class="col-md-3">
+                <div class="card">
+                    <div class="card-header">
+                        공지사항
+                    </div>
+                    <ul class="list-group list-group-flush small">
+                        <li class="list-group-item">[안내] 네이버 카페 이용약관 개정 안내</li>
+                        <li class="list-group-item">[안내] 9월24일부터는 상품등록게시판 글...</li>
+                        <li class="list-group-item">[복구완료] 옛지 브라우저 일부 버전 네이...</li>
+                    </ul>
+                </div>
+                <div class="ad-banner rounded-3 mt-3 d-flex align-items-center justify-content-center">
+                    <p class="text-center fw-bold">광고 배너 영역</p>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

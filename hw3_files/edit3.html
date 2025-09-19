@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>게시물 수정</title>
+   <link rel="icon" href="https://via.placeholder.com/32/00A14B/FFFFFF?text=C" type="image/png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="my.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        body {
+            background-color: #f5f6f7;
+
+            font-family: 'Nanum Gothic', sans-serif;
+
+            color: #333;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 150vh;
+            margin: 0;
+            padding: 0;
+            min-height: 170vh;
+            padding-top: 150px;
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+</head>
+<body>
+    <header class="p-3 mb-3 bg-white border-bottom shadow-sm fixed-top">
+        <div class="container">
+            <div
+                class="d-flex flex-column flex-lg-row align-items-center justify-content-center justify-content-lg-start">
+                <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-dark text-decoration-none h5">
+                    <strong>NAVER 카페</strong>
+                </a>
+
+                <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-auto ms-lg-4" role="search">
+                    <div class="input-group">
+                        <input type="search" class="form-control" placeholder="원하는 카페, 글을 찾아보세요...">
+                        <button class="btn btn-success" type="button"><i class="bi bi-search"></i></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </header>
+    <div class="container my-5" style="max-width: 720px;">
+        <div class="card p-4">
+            <h2 class="mb-4 text-center">게시물 수정하기</h2>
+            <form id="edit-form" onsubmit="return validateAndConfirm()">
+                <div class="mb-3">
+                    <label for="title" class="form-label">제목 (필수)</label>
+                    <input type="text" class="form-control" id="title" value="과제가 너무 힘듭니다...">
+                </div>
+                <div class="mb-3">
+                    <label for="author" class="form-label">작성자</label>
+                    <input type="text" class="form-control" id="author" value="남지원" readonly>
+                </div>
+                <div class="mb-3">
+                    <label for="content" class="form-label">내용 (필수)</label>
+                    <textarea class="form-control" id="content" rows="10">그래도 장소연 교수님 사랑해요..</textarea>
+                </div>
+                <div class="d-flex justify-content-end gap-2">
+                    <a href="view3.html" class="btn btn-secondary">취소</a>
+                    <button type="submit" class="btn btn-success">수정</button>
+                </div>
+            </form>
+        </div>
+         <footer class="bg-light border-top py-3 mt-5">
+        <div class="container d-flex justify-content-between">
+            <div>
+                <strong>2025-02-OSS</strong> | <a href="https://cafe.naver.com/22400509"
+                    target="_blank">https://cafe.naver.com/22400509</a>
+            </div>
+            <div>
+                <strong>NAVER 카페</strong>
+            </div>
+        </div>
+    </footer>
+    </div>
+
+    <script>
+        function validateAndConfirm() {
+            
+            const title = document.getElementById('title').value;
+            const content = document.getElementById('content').value;
+
+            if (title.trim() === '') {
+                alert('제목을 입력해주세요.');
+                return false; 
+            }
+
+            if (content.trim() === '') {
+                alert('내용을 입력해주세요.');
+                return false; 
+            }
+
+           
+            const isConfirmed = confirm("게시물을 수정할까요?");
+            
+            if (isConfirmed) {
+                alert("수정이 확인되었습니다. (실제 데이터는 변경되지 않음)");
+               
+                window.location.href = 'view.html';
+                return false; 
+            } else {
+                alert("수정이 취소되었습니다.");
+                return false; 
+            }
+        }
+    </script>
+</body>
+</html>

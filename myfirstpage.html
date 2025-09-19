@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        p {
+            background-color: blanchedalmond;
+            width: 200px;
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>My First Page</h2>
+    <p id="Cm">Click Me!</p>
+</body>
+
+</html>
+<script>
+    const Cm = document.getElementById('Cm');
+    Cm.addEventListener("click", () => {
+        Cm.innerHTML = "Hello World!"
+        Cm.style.width = "100px";
+        Cm.style.height = "50px";
+
+    })
+</script>

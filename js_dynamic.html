@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function () {
+            const iteminput = document.getElementById('addOrdel');
+            const addButton = document.getElementById('add');
+            const deleteButton = document.getElementById('del');
+            const itemlist = document.getElementById('itemlist');
+
+            addButton.addEventListener('click', addItem);
+            deleteButton.addEventListener('click', deleteItem);
+
+
+
+            function addItem() {
+                const text = iteminput.value;
+
+                if (text.trim() !== '') {
+                    const items = text.split(",");
+
+                    items.forEach(item => {
+                        const trimed = item.trim();
+
+                        if (trimed !== "") {
+                            const li = document.createElement('li');
+                            li.textContent = trimed;
+                            itemlist.appendChild(li);
+                            iteminput.value = '';
+                        }
+
+                    });
+                }
+            }
+
+            function deleteItem() {
+                itemlist.innerHTML = '';
+            }
+        }
+    </script>
+    <style>
+        h1 {
+            font-family: Arial, Helvetica, sans-serif
+        }
+
+        input {
+            background-color: rgb(226, 239, 248);
+            border-width: 1px;
+            border-radius: 2px;
+            border-color: rgb(167, 167, 167);
+        }
+
+        #add {
+            background-color: blue;
+            color: #ffffff;
+            border-width: 0cap;
+        }
+
+        #del {
+            background-color: green;
+            color: #ffffff;
+            border-width: 0cap;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>Dynamic Web page</h1>
+    </div>
+    <form>
+        <div>
+            <input type="text" id="addOrdel">
+            <button type="button" id="add">추가</button>
+            <button type="button" id="del">삭제</button>
+        </div>
+        <div>
+            <ul id="itemlist"></ul>
+        </div>
+    </form>
+</body>
+
+</html>
